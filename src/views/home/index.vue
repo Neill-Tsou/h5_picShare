@@ -2,7 +2,7 @@
   <div>
     <!-- tab -->
     <home-tab></home-tab>
-    <!-- ccontent -->
+    <!-- content -->
     <router-view></router-view>
   </div>
 </template>

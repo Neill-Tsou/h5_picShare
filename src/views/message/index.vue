@@ -8,17 +8,12 @@
             </van-col>
         </van-row>
     </div>
-    <div>
-        <van-row gutter="20">
-            <van-col span="8">赞和收藏</van-col>
-            <van-col span="8">新增关注</van-col>
-            <van-col span="8">评论和@</van-col>
-        </van-row>
-    </div>
+    <msg-header></msg-header>
 </template>
 
 <script>
 import { Tab, Tabs, Col, Row } from 'vant';
+import MsgHeader from '@/components/MsgHeader/index.vue'
 export default {
     name: 'Msg',
     components: {
@@ -26,6 +21,7 @@ export default {
         'van-col': Col,
         'van-tabs': Tabs,
         'van-tab': Tab,
+        MsgHeader
     },
     setup() {
         return {};

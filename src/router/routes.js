@@ -45,9 +45,27 @@ const routes = [
         path: 'user',
         name: 'User',
         component: () => import('@/views/user'),
+        redirect: '/user/story',
+        children: [
+          {
+            path: '/user/story',
+            name: 'UserStory',
+            component: () => import('@/views/user/UserStory/index.vue'),
+          },
+          {
+            path: '/user/collection',
+            name: 'UserCollection',
+            component: () => import('@/views/user/UserCollection/index.vue'),
+          },
+          {
+            path: '/user/likes',
+            name: 'UserLikes',
+            component: () => import('@/views/user/UserLikes/index.vue'),
+          }
+        ],
         meta: {
           title: '我',
-          noCache: true
+          noCache: true,
         }
       },
       {
