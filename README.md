@@ -1,4 +1,4 @@
- **🌱基于 Vue3 全家桶、Vant3，vw 视口适配，开箱即用的移动端项目基础模板**
+ **🌱基于 Vue3 全家桶、Vant3，vw 视口适配，H5图片分享社区**
 
 - [x] Vue3✨
 - [x] Vant3✨
@@ -19,7 +19,7 @@
 
 ## 在线预览Preview
 
-👓 [点击这里](https://yulimchen.github.io/vue3-h5-template/)（PC浏览器请切换手机端模式）
+👓 [点击这里](https://zly-project-picshare.netlify.app/)（PC浏览器请切换手机端模式）
 
 
 
@@ -205,7 +205,7 @@ module.exports = {
 
 ### - <span id="CDN">CDN生产环境依赖</span>
 
-本模板生产环境默认 CDN 加载依赖，依赖加载源见根目录 `dependencies-cdn.js` 文件。
+生产环境默认 CDN 加载依赖，依赖加载源见根目录 `dependencies-cdn.js` 文件。
 
 **❗ PS.为避免打包后出现不可预估问题，请注意确保生产和开发环境的依赖版本一致！**
 

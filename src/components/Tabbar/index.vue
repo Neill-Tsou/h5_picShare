@@ -22,14 +22,14 @@ export default {
         }
       },
       {
-        icon: 'gem-o',
-        title: '工具',
+        icon: 'friends-o',
+        title: '圈子',
         to: {
-          name: 'Tools'
+          name: 'Circle'
         }
       },
       {
-        icon: 'user-o',
+        icon: 'comment-o',
         title: '消息',
         to: {
           name: 'Msg'

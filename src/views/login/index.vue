@@ -53,8 +53,9 @@ export default {
 .login-container {
     border-radius: 15px;
     background-clip: padding-box;
-    margin: 180px auto;
+    // margin: 180px auto;
     // width: 350px;
+    height: 100%;
     padding: 35px 35px 15px 35px;
     background-color: #fff;
     border: 1px solid #eaeaea;
@@ -62,7 +63,7 @@ export default {
 }
 
 .login_title {
-    margin: 0 auto 40px auto;
+    margin: 160px auto 40px auto;
     text-align: center;
     color: #505458
 }

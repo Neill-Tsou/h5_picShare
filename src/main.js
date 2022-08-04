@@ -25,7 +25,7 @@ registerVantComp(app)
 import { registerSvgIconComp } from '@/plugins/registerSvgIcon'
 registerSvgIconComp(app)
 
-//全局前置路由卫士，开发中8.1
+// 全局前置路由卫士
 router.beforeEach((to, from, next) => {
   store.commit('getToken')
   const token = store.state.user.token
@@ -42,22 +42,21 @@ router.beforeEach((to, from, next) => {
     next()
   }
 })
-// 未登录用户允许访问home
+// 未登录用户允许访问home，开发中
 // router.beforeEach((to, from, next) => {
 //   store.commit('getToken')
 //   const token = store.state.user.token
-//   if (!token && to.name === 'Home') {
-//     next({ name: 'Home' })
-//   }
-//   else if (!token && to.name !== 'Home') {
-//     next({ name: 'Login' })
-//   }
-//   else if (token && to.name === 'Login') {
-//     next({ name: 'Home' })
-//   }
-//   else if (token && to.name !== 'Login') {
+//   if (token) {
 //     next()
+//   } else {
+//     if (to.name == 'Home') {
+//       next()
+//     }
+//     else {
+//       next({ name: 'Login' })
+//     }
 //   }
+
 // })
 
 app

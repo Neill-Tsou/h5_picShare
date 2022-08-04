@@ -13,14 +13,32 @@ const routes = [
         component: () => import('@/views/home'),
         meta: {
           title: '主页'
-        }
+        },
+        redirect: '/home/find',
+        children: [
+          {
+            path: '/home/find',
+            name: 'PageFind',
+            component: () => import('@/views/home/PageFind.vue'),
+          },
+          {
+            path: '/home/focus',
+            name: 'PageFocus',
+            component: () => import('@/views/home/PageFocus.vue'),
+          },
+          {
+            path: '/home/select',
+            name: 'PageSelect',
+            component: () => import('@/views/home/PageSelect.vue'),
+          }
+        ]
       },
       {
-        path: 'tools',
-        name: 'Tools',
-        component: () => import('@/views/tools'),
+        path: 'circle',
+        name: 'Circle',
+        component: () => import('@/views/circle'),
         meta: {
-          title: '工具'
+          title: '圈子'
         }
       },
       {
