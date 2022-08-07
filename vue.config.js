@@ -99,3 +99,23 @@ module.exports = {
     before: require('./mock/mock-server.js')
   }
 }
+
+//解决跨域
+// module.exports = {
+//   devServer: {
+//     host: 'localhost',
+//     port: 8080,
+//     https: false,
+//     //以上是本机ip和端口，以下是需要跨域
+//     proxy: {
+//       '/api': {
+//         target: 'http://localhost:8081',
+//         ws: true,
+//         cahngeOrigin: true,//允许跨域
+//         pathRewrite: {
+//           '^/api': 'http://localhost8081'
+//         }
+//       }
+//     }
+//   }
+// }

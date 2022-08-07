@@ -1,16 +1,20 @@
 <template>
   <van-tabbar v-model="active" fixed :placeholder="true" :route="true">
-    <van-tabbar-item v-for="(item, index) in tabbarData" :key="index" :icon="item.icon" :to="item.to">
+    <van-tabbar-item v-for="(item, index) in tabbarData" :key="index" :icon="item.icon" :to="item.to"
+      :click="item.click">
       {{ item.title }}
     </van-tabbar-item>
   </van-tabbar>
+  <!-- <van-popup v-model:show="show"></van-popup> -->
 </template>
 
 <script>
 import { ref, reactive } from 'vue'
+// import { Popup } from 'vant';
 
 export default {
   name: 'Tabbar',
+  // components: { 'van-popup': Popup },
   setup(props) {
     const active = ref(0)
     const tabbarData = reactive([
@@ -29,6 +33,16 @@ export default {
         }
       },
       {
+        icon: 'plus',
+        title: '',
+        to: {
+          name: 'Upload'
+        }
+        // click: () => {
+        //   show.value = true;
+        // }
+      },
+      {
         icon: 'comment-o',
         title: '消息',
         to: {
@@ -43,9 +57,15 @@ export default {
         }
       }
     ])
+    // const show = ref(false);
+    // const showPopup = () => {
+    //   show.value = true;
+    // };
     return {
       active,
-      tabbarData
+      tabbarData,
+      // show,
+      // showPopup,
     }
   }
 }

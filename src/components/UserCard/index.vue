@@ -94,7 +94,8 @@ export default {
     }
 
     .userInfoBox {
-        margin: 30px 20px 20px 20px
+        margin: 30px 20px 20px 20px;
+        font-size: 0.8rem;
     }
 }
 </style>

@@ -85,6 +85,14 @@ const routes = [
     meta: {
       title: '登录'
     }
+  },
+  {
+    path: '/upload',
+    name: 'Upload',
+    component: () => import('@/views/upload'),
+    meta: {
+      title: '上传'
+    }
   }
 ]
 
