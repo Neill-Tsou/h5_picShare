@@ -1,24 +1,29 @@
 <template>
+    <!-- Head -->
+    <van-nav-bar title="分享图片故事" left-text="返回" left-arrow @click-left="onClickLeft" />
+    <!-- Uploader -->
     <van-uploader v-model="fileList" multiple />
 
 </template>
 
 <script>
-import { Uploader } from 'vant';
+import { Uploader, NavBar } from 'vant';
 import { ref } from 'vue';
 export default {
     name: 'Upload',
-    components: { 'van-uploader': Uploader },
+    components: {
+        'van-uploader': Uploader,
+        'van-nav-bar': NavBar
+    },
     setup() {
         const fileList = ref([
             { url: 'https://fastly.jsdelivr.net/npm/@vant/assets/leaf.jpeg' },
-            // Uploader 根据文件后缀来判断是否为图片文件
-            // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
-            // { url: 'https://cloud-image', isImage: true },
         ]);
+        const onClickLeft = () => history.back();
 
         return {
             fileList,
+            onClickLeft,
         };
     }
 
