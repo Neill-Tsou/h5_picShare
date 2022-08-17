@@ -93,6 +93,14 @@ const routes = [
     meta: {
       title: '上传'
     }
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: () => import('@/views/test'),
+    meta: {
+      title: '测试'
+    }
   }
 ]
 

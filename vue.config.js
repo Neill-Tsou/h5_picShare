@@ -101,21 +101,19 @@ module.exports = {
 }
 
 //解决跨域
-// module.exports = {
-//   devServer: {
-//     host: 'localhost',
-//     port: 8080,
-//     https: false,
-//     //以上是本机ip和端口，以下是需要跨域
-//     proxy: {
-//       '/api': {
-//         target: 'http://localhost:8081',
-//         ws: true,
-//         cahngeOrigin: true,//允许跨域
-//         pathRewrite: {
-//           '^/api': 'http://localhost8081'
-//         }
-//       }
-//     }
-//   }
-// }
+module.exports = {
+  // 代理
+  devServer: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000/api", // 目标代理接口地址
+        secure: false,// https
+        changeOrigin: true, // 开启代理，在本地创建一个虚拟服务端
+        // ws: true, // 是否启用websockets
+        pathRewrite: {
+          "^/api": " "
+        }
+      }
+    }
+  }
+}

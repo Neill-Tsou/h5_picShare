@@ -17,9 +17,13 @@ export default {
         'van-nav-bar': NavBar
     },
     setup() {
-        //拿到图片url，预览
+        //拿到图片，预览
         const fileList = ref([]);
+        //文件标识符，作为存储桶里的唯一主键
         let pid = 0;
+        let date = new Date()
+        let timer = date.getTime();
+        //上传文件执行回调
         const afterRead = (file) => {
             // 此时可以自行将文件上传至服务器
             console.log(file);
@@ -37,7 +41,7 @@ export default {
                 {
                     Bucket: "bucket-1313109230" /* 填入您自己的存储桶，必须字段 */,
                     Region: "ap-chongqing" /* 存储桶所在地域，例如ap-beijing，必须字段 */,
-                    Key: `pid${pid}` /* 存储在桶里的对象键（例如1.jpg，a/b/test.txt），必须字段 */,
+                    Key: `pid=${pid}&time=${timer}` /* 存储在桶里的对象键（例如1.jpg，a/b/test.txt），必须字段 */,
                     StorageClass: "STANDARD",
                     Body: file.file, // 上传文件对象
                 },
