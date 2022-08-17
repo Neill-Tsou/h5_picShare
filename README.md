@@ -10,7 +10,9 @@ Vue 3.0 + VueRouter + Vuex + Less + Vant 3 + axios + COS + (express + mySQL)
 
 ## Preview
 
-👓 [点击这里](https://zly-project-picshare.netlify.app/)（PC浏览器请切换手机端模式）
+👓 [点击这里](https://zly-project-picshare.netlify.app/)
+
+（PC浏览器请切换手机端模式，仅部署了纯前端部分，即master分支，最新内容请查看demo分支）
 
 
 
